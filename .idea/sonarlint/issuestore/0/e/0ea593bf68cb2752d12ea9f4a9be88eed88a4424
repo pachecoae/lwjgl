@@ -1,0 +1,9 @@
+
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ë·ïÝÿÿÿÿÿ8ôÅÎ¦×+
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(íèî‡øÿÿÿÿ
+_squid:HiddenFieldCheck":Rename "window" which hides the field declared at line 17.(ûœ´­úÿÿÿÿ
+Osquid:S2095"5Close this "GLFWErrorCallback" in a "finally" clause.(àâç”ûÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(àâç”ûÿÿÿÿ
+1squid:S1220""Move this file to a named package.
