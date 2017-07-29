@@ -1,0 +1,7 @@
+
+`squid:HiddenFieldCheck"9Rename "width" which hides the field declared at line 47.(¤§ğ¢8ÜÂœØ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(àâç”ûÿÿÿÿ8õ§îŒØ+
+asquid:HiddenFieldCheck":Rename "height" which hides the field declared at line 48.(¤§ğ¢8ÜÂœØ+
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(Ë·ïİÿÿÿÿÿ8õ§îŒØ+
+Vsquid:S2095"5Close this "GLFWErrorCallback" in a "finally" clause.(àâç”ûÿÿÿÿ8õ§îŒØ+
