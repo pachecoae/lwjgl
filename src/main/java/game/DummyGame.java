@@ -6,6 +6,7 @@ import static org.lwjgl.opengl.GL11.glViewport;
 
 import engine.IGameLogic;
 import engine.Window;
+import engine.graph.Mesh;
 
 /**
  * Simple game logic class that increases and decreases the clear color of the window whenever we press
@@ -16,6 +17,7 @@ public class DummyGame implements IGameLogic {
     private int direction = 0;
     private float color = 0.0f;
     private final Renderer renderer;
+    private Mesh mesh;
 
     public DummyGame() {
         renderer = new Renderer();
@@ -23,7 +25,33 @@ public class DummyGame implements IGameLogic {
 
     @Override
     public void init() throws Exception {
+
         renderer.init();
+
+        // Vertices for a square
+        float[] positions = new float[] {
+            -0.5f, 0.5f, 0.0f,
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.5f, 0.5f, 0.0f,
+        };
+
+        // Colour for the square
+        float[] colour = new float[]{
+            0.5f, 0.0f, 0.0f,
+            0.0f, 0.5f, 0.0f,
+            0.0f, 0.0f, 0.5f,
+            0.0f, 0.5f, 0.5f,
+        };
+
+        // Indices for a square
+        int[] indices = new int[]{
+          0, 1, 3, 3, 1, 2,
+        };
+
+        // Create a square mesh
+        mesh = new Mesh(positions, colour, indices);
+
     }
 
     @Override
@@ -60,13 +88,14 @@ public class DummyGame implements IGameLogic {
 
         // Set the clear color of the window
         window.setClearColor(color, color, color, 0.0f);
-        renderer.render(window);
+        renderer.render(window, mesh);
 
     }
 
     @Override
     public void cleanup() {
         renderer.cleanup();
+        mesh.cleanUp();
     }
 
 }

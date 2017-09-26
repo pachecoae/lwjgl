@@ -95,7 +95,7 @@ public class GameEngine implements Runnable {
 
             // Avoid issues with sleep accuracy by:
             // 1. Calculate the time we should exit the wait method and start another iteration of our game loop
-            // 2. Compare the current time with taht end time and wait just a millisecond if we've not reached that time
+            // 2. Compare the current time with that end time and wait just a millisecond if we've not reached that time
             if (!window.isvSync()) {
                 sync();
             }
